@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Triple K - Home</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: white;
+    }
+
+    /* Sticky Navigation Bar Styles */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: maroon;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+    }
+
+    .nav-links li {
+      margin: 0 15px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #FFD700; /* Gold highlight on hover */
+    }
+
+    /* Header Section */
+    header {
+      margin-top: 80px;
+      text-align: center;
+    }
+
+    header h1 {
+      display: inline-block;
+      background-color: maroon;
+      color: white;
+      padding: 20px 40px;
+      border-radius: 10px;
+    }
+
+    /* Page Layout */
+    .container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 20px;
+      gap: 40px;
+    }
+
+    /* Adjusted Shadow Box Styling */
+    .shadow-box {
+      width: 50%;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+      text-align: justify;
+    }
+
+    /* Carousel Styling - Larger and No Zoom */
+    .image-slider {
+      width: 55%;
+      height: 400px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    .slides {
+      display: flex;
+      height: 100%;
+      transition: transform 0.6s ease; /* Smooth transition */
+    }
+
+    .slides img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; /* Prevents zooming */
+    }
+
+    /* Arrow Buttons */
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      font-size: 2rem;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+      z-index: 10;
+      transition: background-color 0.3s;
+    }
+
+    .carousel-btn:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+
+    /* Video Shadow Box */
+    .video-container {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .video-box {
+      width: 50%;
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    video {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    /* Footer Styling */
+    footer {
+      background-color: maroon;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Sticky Navigation Bar -->
+  <nav>
+    <div class="logo">
+      <img src="tkl.png" alt="Triple K Logo" />
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header Section with Adjusted Background -->
+  <header>
+    <h1>Welcome to Triple K</h1>
+  </header>
+
+  <!-- Main Content Section -->
+  <main>
+    <div class="container">
+      <!-- Left Side: Shadow Box with Text -->
+      <div class="shadow-box">
+        <h2>Welcome to Triple K</h2>
+        <p>
+          Triple K Enterprises was founded in 2016. We primarily provide a variety of quality tools and equipment such as formworks, metal fabrications,
+          scaffolding, power tools, measuring tools, hand tools, insulations, welding machines, generator sets, air compressors, mills supplies, electrical supplies,
+          hardware supplies, appliances, electronics, and other construction-related materials.
+        </p>
+        <br />
+        <p>
+          We are committed to delivering quality products and providing real-time services. Our clients trust us for our dedication to supplying high-quality tools and materials at reasonable prices.
+        </p>
+        <br />
+        <p>
+          As we prioritize sustainability, our products are safe, durable, and eco-friendly. Join us on our journey as your trusted construction partner.
+        </p>
+        <br />
+        <p>We are Triple K Enterprises. We work to make you happy.</p>
+      </div>
+
+      <!-- Right Side: Image Carousel with Arrows -->
+      <div class="image-slider">
+        <div class="slides">
+          <img src="1.jpg" alt="Construction Image 1" />
+          <img src="2.jpg" alt="Construction Image 2" />
+          <img src="3.jpg" alt="Construction Image 3" />
+          <img src="4.jpg" alt="Construction Image 4" />
+          <img src="5.jpg" alt="Construction Image 5" />
+	  <img src="6.jpg" alt="Construction Image 6" />
+	  <img src="7.jpg" alt="Construction Image 7" />
+	  <img src="8.jpg" alt="Construction Image 8" />
+        </div>
+        <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
+      </div>
+    </div>
+
+    <!-- Video Section -->
+    <div class="video-container">
+      <div class="video-box">
+        <video controls>
+          <source src="vid.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2016 Triple K. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Carousel with Smooth Transition -->
+  <script>
+    let index = 0;
+    const slides = document.querySelector(".slides");
+    const images = document.querySelectorAll(".slides img");
+    const totalSlides = images.length;
+
+    function moveSlide(direction) {
+      index += direction;
+
+      if (index < 0) {
+        index = totalSlides - 1;
+      } else if (index >= totalSlides) {
+        index = 0;
+      }
+
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    // Auto Slide Every 8 Seconds
+    setInterval(() => moveSlide(1), 8000);
+  </script>
+</body>
+
+</html>
