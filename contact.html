@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Triple K - Contact</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Sticky Navigation Bar Styles */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: maroon;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+      z-index: 1000;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+    }
+
+    .nav-links li {
+      margin: 0 15px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #FFD700;
+    }
+
+    /* Header Section */
+    header {
+      margin-top: 80px;
+      display: flex;
+      justify-content: center;
+    }
+
+    header h1 {
+      background-color: maroon;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+    }
+
+    /* Contact Section with Map */
+    .contact-section {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 40px auto;
+      gap: 20px;
+    }
+
+    .contact-info {
+      width: 45%;
+      background-color: #f0f0f0;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-info h2 {
+      color: maroon;
+    }
+
+    .contact-info a {
+      color: maroon;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    iframe {
+      width: 65%;
+      height: 400px;
+      border-radius: 10px;
+      border: 0;
+    }
+
+    /* Inquiry Section */
+    .inquiry-section {
+      width: 75%;
+      margin: 40px auto;
+      padding: 40px;
+      background-color: #f0f0f0;
+      border-radius: 10px;
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .inquiry-section h2 {
+      color: maroon;
+      margin-bottom: 20px;
+    }
+
+    .inquiry-form label {
+      display: block;
+      margin-bottom: 8px;
+      color: black;
+    }
+
+    .inquiry-form input,
+    .inquiry-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #e0e0e0;
+    }
+
+    textarea {
+      resize: none;
+      height: 200px;
+    }
+
+    .send-btn {
+      background-color: maroon;
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      float: right;
+    }
+
+    .send-btn:hover {
+      background-color: #a52a2a;
+    }
+
+    /* Footer */
+    footer {
+      background-color: maroon;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Sticky Navigation Bar -->
+  <nav>
+    <div class="logo">
+      <img src="tkl.png" alt="Triple K Logo" />
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header Section -->
+  <header>
+    <h1>Contact Triple K</h1>
+  </header>
+
+  <!-- Contact Section with Map -->
+  <div class="contact-section">
+    <!-- Left: Contact Info -->
+    <div class="contact-info">
+      <h2>Contact Us</h2>
+      <br> </br>
+      <p><strong>Address:</strong> Block 6 Lot 17 C. Molave Road, Las Pinas City</p>
+      <br> </br>
+      <p><strong>Email:</strong> <a href="mailto:triplekentp@gmail.com">triplekentp@gmail.com</a></p>
+      <br> </br>
+      <p><strong>Telephone Number:</strong> 02 8524-8908</p>
+      <br> </br>
+      <p><strong>Contact:</strong> 0917-175-9795</p>
+      <br> </br>
+      <p><strong>Facebook:</strong> <a href="https://www.facebook.com/TripleKntrps/" target="_blank">Triple K Enterprises</a></p>
+    </div>
+
+    <!-- Right: Google Maps -->
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1930.4391172652624!2d121.0072488!3d14.413862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d19812d8a2fd%3A0xcd48b1bfcbbede0a!2sTriple%20K%20Enterprises!5e0!3m2!1sen!2sph!4v1711100000000!5m2!1sen!2sph" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <!-- Inquiry Section -->
+  <div class="inquiry-section">
+    <h2>Leave an Inquiry</h2>
+    <form class="inquiry-form" onsubmit="return validateInquiry()">
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" />
+
+      <label for="message">Inquiry Message:</label>
+      <textarea id="message" name="message" placeholder="Enter your inquiry message"></textarea>
+
+      <button class="send-btn" type="submit">SEND</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2016 Triple K Enterprises. All Rights Reserved.
+  </footer>
+
+  <!-- JavaScript for Form Validation -->
+  <script>
+    function validateInquiry() {
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (!email && !message) {
+        alert("I think you forgot to input an inquiry? Please do so.");
+        return false;
+      } else if (!email) {
+        alert("Please input an email address. Thank you!");
+        return false;
+      } else if (!message) {
+        alert("Please input an inquiry message. Thank you!");
+        return false;
+      } else {
+        alert("Thank you for leaving an inquiry! Kindly wait for our reply.");
+        return true;
+      }
+    }
+  </script>
+</body>
+
+</html>

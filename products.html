@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Triple K - Products</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Sticky Navigation Bar Styles */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: maroon;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+    }
+
+    .nav-links li {
+      margin: 0 15px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #FFD700;
+    }
+
+    /* Header Section */
+    header {
+      margin-top: 80px;
+      display: flex;
+      justify-content: center;
+    }
+
+    header h1 {
+      background-color: maroon;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+    }
+
+    /* Products Section */
+    .products-section {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .products-section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: maroon;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th,
+    td {
+      border: 1px solid #ccc;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Ensure brand images are the same size */
+    th img {
+      width: 400px;
+      height: auto;
+    }
+
+    /* Product Image Effects */
+    td img {
+      width: 250px;
+      height: auto;
+      margin-top: 10px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    td img:hover {
+      transform: scale(1.1);
+    }
+
+    td p {
+      margin-top: 10px;
+      color: black;
+      font-weight: bold;
+    }
+
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 800px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+    }
+
+    .modal img {
+      width: 60%;
+      max-height: 500px;
+      object-fit: contain;
+    }
+
+    .product-description {
+      width: 40%;
+      color: #333;
+      text-align: left;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 24px;
+      cursor: pointer;
+      color: maroon;
+    }
+
+    /* Footer Styling */
+    footer {
+      background-color: maroon;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Sticky Navigation Bar -->
+  <nav>
+    <div class="logo">
+      <img src="tkl.png" alt="Triple K Logo" />
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header Section -->
+  <header>
+    <h1>Our Products</h1>
+  </header>
+
+  <!-- Products Section -->
+  <div class="products-section">
+    <h2>Explore Our Product Selection</h2>
+    <table>
+      <thead>
+        <tr>
+          <th><img src="mlogo.jpg" alt="MAKITA" /></th>
+          <th><img src="slogo.png" alt="STANLEY" /></th>
+          <th><img src="ologo.jpg" alt="OMAGA" /></th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Dynamic Generation Using JavaScript -->
+        <script>
+          const products = {
+            MAKITA: [
+              { src: "m1.jpg", name: "Maktrak Rolling Tool Chest", desc: "Heavy-duty storage and transport." },
+              { src: "m2.jpg", name: "Maktrak Deep Medium Organizer", desc: "Organized storage for tools." },
+              { src: "m3.jpg", name: "40V Max XGT High Torque", desc: "Powerful, cordless high torque tool." },
+              { src: "m4.jpg", name: "Brushless Cordless StarlockMax", desc: "Multipurpose tool for professionals." }
+            ],
+            STANLEY: [
+              { src: "s1.jpg", name: "25ft Fatmax Tape Measure", desc: "Accurate and durable tape measure." },
+              { src: "s2.jpg", name: "15\" Tradecut Panel Saw", desc: "Perfect for woodcutting jobs." },
+              { src: "s3.jpg", name: "Retractable Utility Knife", desc: "Sharp and reliable cutting tool." },
+              { src: "s4.jpg", name: "28oz Fatmax Hammer", desc: "Strong and ergonomic hammer design." }
+            ],
+            OMAGA: [
+              { src: "o1.jpg", name: "Steel Boots", desc: "Durable and protective footwear." },
+              { src: "o2.jpg", name: "Caution Tape", desc: "For hazard identification." },
+              { src: "o3.jpg", name: "Traffic Light", desc: "Standard traffic management tool." },
+              { src: "o4.jpg", name: "Traffic Barrier", desc: "Heavy-duty traffic management barrier." }
+            ]
+          };
+
+          for (let i = 0; i < 4; i++) {
+            document.write("<tr>");
+            Object.keys(products).forEach(brand => {
+              const product = products[brand][i];
+              document.write(`
+                <td>
+                  <p>${product.name}</p>
+                  <img src="${product.src}" alt="${product.name}" onclick="openModal('${product.src}', '${product.name}', '${product.desc}')">
+                </td>
+              `);
+            });
+            document.write("</tr>");
+          }
+        </script>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Modal Section -->
+  <div class="modal" id="imageModal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <img id="modalImage" src="" alt="Enlarged Product Image">
+      <div class="product-description" id="modalDescription"></div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    &copy; 2016 Triple K Enterprises. All Rights Reserved.
+  </footer>
+
+  <!-- JavaScript for Modal and Key Event -->
+  <script>
+    function openModal(imageSrc, title, description) {
+      document.getElementById('modalImage').src = imageSrc;
+      document.getElementById('modalDescription').innerHTML = `<h3>${title}</h3><p>${description}</p>`;
+      document.getElementById('imageModal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('imageModal').style.display = 'none';
+    }
+
+    // Close on Escape key
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+
+</html>
